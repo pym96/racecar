@@ -4,29 +4,29 @@
 
 ROS racecar  
 ************************安装************************  
-cd  ~/  
-git clone https://github.com/ART-Robot-Release/racecar  
-cd racecar  
-./install.sh  
+	cd  ~/  
+	git clone https://github.com/ART-Robot-Release/racecar  
+	cd racecar  
+	./install.sh  
 配置小车串口udev：  
-cd  ~/racecar/src/art_racecar/udev  
-sudo  bash art_init.sh  
-sudo reboot  
+	cd  ~/racecar/src/art_racecar/udev  
+	sudo  bash art_init.sh  
+	sudo reboot  
 **********************建立地图**********************  
 先安装电脑用户名和主机名配置主从机  
 a) 运行车  
-roslaunch art_racecar Run_car.launch  
+	roslaunch art_racecar Run_car.launch  
 b) 3.3运行gmapping  
-roslaunch art_racecar Run_gmapping.launch  
+	roslaunch art_racecar Run_gmapping.launch  
 c) 3.4运行键盘控制  
-rosrun art_racecar racecar_teleop.py  
+	rosrun art_racecar racecar_teleop.py  
 或者手柄遥控  
-roslaunch art_racecar teleop_joy.launch  
+	roslaunch art_racecar teleop_joy.launch  
 d) 3.5.本地电脑打开rviz  
 本地电脑打开：  
-source  工作空间  
-source art_racecar/art_rviz.sh  
-roslaunch art_racecar rviz.launch  
+	source  工作空间  
+	source art_racecar/art_rviz.sh  
+	roslaunch art_racecar rviz.launch  
 e) 3.6 建立地图  
 键盘控制建立地图,按键如下：  
 U	I 	O  
@@ -43,16 +43,16 @@ f) 保存地图（地图直接保存在小车上）
 
 ************************导航************************  
 a) SSH连接小车（Ubuntu系统为例）sz为小车用户名  
-ssh sz@192.168.5.101  
+	ssh sz@192.168.5.101  
 b) 运行车  
-roslaunch art_racecar Run_car.launch  
+	roslaunch art_racecar Run_car.launch  
 c) 运行AMCL  
-roslaunch art_racecar amcl_nav.launch  
+	roslaunch art_racecar amcl_nav.launch  
 d) .本地电脑打开rviz  
 本地电脑打开：  
-source  工作空间  
-source art_racecar/art_rviz.sh  
-roslaunch art_racecar rviz.launch  
+	source  工作空间  
+	source art_racecar/art_rviz.sh  
+	roslaunch art_racecar rviz.launch  
 e) 4.5 开始导航   
 在RVIZ中设定初始坐标，设定目标位置，开始导航  
 *********************软件接口***********************  
